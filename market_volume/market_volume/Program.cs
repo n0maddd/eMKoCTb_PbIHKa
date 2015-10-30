@@ -31,6 +31,17 @@ namespace Statistic
 
             Console.WriteLine(String.Format("Number of items sold in {0} year:", Year1));
             decimal NumberOfItems1 = Convert.ToDecimal(Console.ReadLine());
+
+            // Calculate volumes
+            decimal MarketVolume0 = Price0 * NumberOfItems0;
+            decimal MarketVolume1 = Price1 * NumberOfItems1;
+
+            // Calculate delta
+            decimal DeltaPrice = (Price1 - Price0) * 100 / Price0;
+            decimal DeltaNumberOfItems = (NumberOfItems1 - NumberOfItems0) * 100 / NumberOfItems0;
+
+            // Calculate volume delta
+            decimal DeltaMarketVolume = (MarketVolume1 - MarketVolume0) * 100 / MarketVolume0;
         }
     }
 }
